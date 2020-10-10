@@ -1,159 +1,18 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-
 body {
-	line-height: 1;
-}
-
-
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-body {
-	background-image: url("uefa2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 1583px;
-	height: 900px;
-	margin: 0;
-	color: white;
-	font-family: 'Acme', sans-serif;
-}
-
-.body {
 	display: grid;
 	grid-template-columns: 25% 15% 35% 25%;
 	grid-template-rows: 15% 20% 15% 40% 10%;
+	height: 100vh;
+
+	background-image: url("uefa2.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	margin: 0;
 	color: white;
 	font-family: 'Acme', sans-serif;
-	height: 100%;
-	width: 100%;
-}
-
-.background {
-	grid-row: 1;
-	grid-column: 1/6;
-	background-color: #0c7007;
-	opacity: 0.5;
-	margin: 0;
-	padding: 0;
-	display: flex;
-
 }
 
 .navbar {
@@ -165,7 +24,7 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	width: 100%;
-	height: 125px;
+	height: 140px;
 	margin: 0;
 	padding: 0;
 }
@@ -181,11 +40,16 @@ body {
 }
 
 .links:hover {
-	color: white;
+	color: rgb(78, 179, 83);
+	cursor: pointer;
+}
+
+.navbar li:hover {
+	transform: scale(1.5);
 }
 
 .links:active {
-	color: white;
+	color: rgb(255, 255, 255);
 }
 
 .logo {
@@ -220,14 +84,24 @@ body {
 .events {
 	grid-row: 3;
 	grid-column: 3/5;
-	font-size: 35px;
+	font-size: 30px;
 	z-index: 10;
 	text-align: left;
 	padding: 25px;
 }
 
+.notification {
+	padding: 25px 0 0 0;
+	font-size: 35px;
+}
+
 .dates {
 	color: navy;
+	margin: 0;
+}
+
+.list {
+	margin: 0;
 }
 
 .headingtext {
@@ -243,10 +117,9 @@ body {
 
 .backgroundhome {
 	grid-row: 3/5;
-	grid-column: 3/5;
+	grid-column: 3/6;
 	background-color: #0c7007;
 	opacity: 0.5;
-	margin: 0 0 161px 0;
 	padding: 0;
 
 }
@@ -264,11 +137,11 @@ body {
 }
 
 .backgroundabout {
-	grid-row: 3/5;
-	grid-column: 3/5;
+	grid-row: 3/6;
+	grid-column: 3/6;
 	background-color: #0c7007;
 	opacity: 0.5;
-	margin: 0 0 160px 0;
+	margin: 0;
 	padding: 0;
 
 }
@@ -291,12 +164,10 @@ body {
 }
 
 .contactmail:hover {
-	color: navy;
+	color: rgb(78, 179, 83);
+	cursor: pointer;
 }
 
-.contactmail:active {
-	color: navy;
-}
 
 .backgroundcontact {
 	grid-row: 3;
@@ -326,8 +197,30 @@ body {
 	text-align: center;
 }
 
+.game-info {
+	font-family: Lato !important;
+}
 
-.table1 {
+thead {
+	color: navy;
+
+}
+
+.contact-person:hover {
+	color: rgb(78, 179, 83);
+	cursor: pointer;
+}
+
+.contact-person {
+	color: navy;
+
+}
+
+.contact-person:visited {
+	color: navy;
+}
+
+.table3 {
 	grid-row: 3/5;
 	grid-column: 1;
 	justify-content: space-evenly;
@@ -336,9 +229,15 @@ body {
 	display: flex;
 	z-index: 10;
 	padding: 10px;
+	margin: 20px 0 0 20px;
+	border: solid 2px navy;
 }
 
-.table2 {
+.table3 th {
+	text-align: initial;
+}
+
+.table1 {
 	grid-row: 3/5;
 	grid-column: 2/4;
 	display: flex;
@@ -346,43 +245,70 @@ body {
 	line-height: 1.5;
 	z-index: 10;
 	padding: 10px;
+	margin: 20px 0 0 20px;
 }
 
-.table3 {
+.table2 {
 	grid-row: 3;
-	grid-column: 3/5;
+	grid-column: 2/5;
 	display: flex;
 	align-items: flex-start;
 	line-height: 1.5;
 	justify-content: center;
 	z-index: 10;
 	padding: 10px;
+	margin: 20px 0 0 0;
 }
 
-.alltext {
-	grid-row: 4;
-	grid-column: 1/3;
+.info-text2 {
+	grid-row: 3;
+	grid-column: 4;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: start;
-	flex-wrap: wrap;
 	line-height: 1.5;
-	padding: 40px;
 	z-index: 10;
+	margin: 20px 0 0 20px;
+}
+
+
+.info-text1 {
+	grid-row: 4;
+	grid-column: 2/4;
+	display: flex;
+	align-items: baseline;
+	flex-direction: column;
+	line-height: 1.5;
+	justify-content: flex-end;
+	z-index: 10;
+	padding: 10px;
+	margin: 20px 0 0 20px;
+}
+
+
+
+.info-text1 p,
+.info-text2 p {
+	margin: 0;
 }
 
 .map {
 	display: flex;
 	grid-row: 4;
-	grid-column: 3;
-	justify-content: flex-end;
-	align-items: flex-end;
+	grid-column: 4;
 	z-index: 10;
+	padding: 20px;
+	margin: 0 20px 0 0;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
 }
 
 .backgroundgame_info {
-	grid-row: 3/5;
+	grid-row: 3/6;
 	grid-column: 1/5;
 	background-color: #0c7007;
 	opacity: 0.5;
@@ -393,60 +319,96 @@ body {
 
 .formcontainer {
 	display: flex;
-    justify-content: center;
-    grid-row: 3/6;
+	justify-content: center;
+	grid-row: 3/6;
 	grid-column: 1/6;
-	background-color: rgba(12,112,7, 0.5);
-	
+	background-color: rgba(12, 112, 7, 0.5);
+
 }
 
 .form {
-	display:flex;
-	width: 1400px;
-	height: 500px;
+	display: flex;
+	width: 100%;
 	justify-content: center;
 	align-content: space-between;
 	padding: 10px;
-	
+
 }
 
 .part1 {
 	display: flex;
-    width: 650px;
-    height: 550px;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    line-height: 2;
+	width: 50%;
+	flex-direction: column;
+	line-height: 2;
 	align-content: space-evenly;
 	text-align: right;
-	
+	padding: 25px;
+
 }
 
 .part2 {
-	display:flex;
-	width: 650px;
-	height: 550px;
-	justify-content: center;
+	display: flex;
+	width: 50%;
 	flex-direction: column;
-	line-height: 2;
-	padding: 10px;
-	
+	line-height: 1.5;
+	padding: 25px ;
+
 }
+
 
 .formtextinput {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
-	
+
 }
 
+.permission {
+	margin-top: 40px;
+}
+
+.signature {
+	margin-top: 20px;
+}
+
+
+button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(39, 92, 32);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+				inset -2px -2px 3px rgba(0, 0, 0, .6);
+				
+	margin-top: 20px;
+	width: 250px;
+}
+
+button:hover {
+    background-color: rgb(65, 167, 51);
+}
+
+button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
 .reg_table {
-    border: 3px solid green;
-    border-collapse: collapse;
-    font-family: 'Acme', sans-serif;
-    color: white;
-    font-size: 17px;
+	border: 3px solid green;
+	border-collapse: collapse;
+	font-family: 'Acme', sans-serif;
+	color: white;
+	font-size: 17px;
 	grid-row: 3;
 	grid-column: 3;
 	display: flex;
@@ -458,34 +420,20 @@ body {
 
 /* animation */
 
-@keyframes navbar {
-    from {background-color: navy;}
-    to {background-color: yellowgreen;}
-  }
+@keyframes infinite-spinning {
+	from {
+		transform: rotate(0deg);
+	}
 
-  .background {
-    animation-name: navbar;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
-
-  @keyframes infinite-spinning {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .ball {
-    animation-name: infinite-spinning;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	animation-name: infinite-spinning;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 
 }
-
-
-
